@@ -1,0 +1,268 @@
+// vars
+$spacer: 20px
+$dark-gray: #333333
+$darker-blue: #1e1e26
+$dark-blue: #2d2d37
+$periodos: #662c86
+$artes: #ed174f
+$baul: #f89e59
+$atlas: #ffd457
+$curiosidades: #b63e97
+$shadow: 0px 0px 5px rgba(0,0,0,.5)
+
+// imports
+@import "compass/css3"
+@import "compass/reset"
+@import "compass/typography"
+@import "font-awesome"
+
+// mixins
+@mixin clearfix 	
+	&:before,
+	&:after 	
+		content: ""	
+		display: table	
+		
+	&:after 	
+		clear: both	
+		
+	*zoom: 1
+
+html, body
+	min-height: 100%
+	overflow-x: hidden
+	background: url(../img/background.png)
+	font-family: Helvetica, Arial, sans
+	font-size: .9em
+a
+	text-decoration: none 
+p
+	font-family: Georgia, Times New Roman, sans serif
+	font-size: .9em
+	margin: $spacer/2 0
+	line-height: 1.3em
+
+.main-header
+	background: white
+	box-shadow: $shadow
+	position: fixed
+	width: 100%
+	left: 0
+	z-index: 98
+	@include transition-property(all)
+	@include transition-duration(0.3s)
+	@include transition-timing-function(ease)
+	a
+		position: absolute
+		right: 20px
+		top: 20px
+		font-size: 17px
+		background: #e0e2e1
+		color: #7a7a7a
+		padding: $spacer/2
+		border-radius: $spacer/4
+		box-shadow: inset 0px 0px 5px rgba(0,0,0,.2)
+		text-decoration: none
+	.logo
+		margin-left: 6px
+		padding: $spacer/2
+
+.page-wrap
+	width: 100%
+	left: 0
+	position: absolute
+	@include transition-property(all)
+	@include transition-duration(0.3s)
+	@include transition-timing-function(ease)
+
+.main-nav
+	position: fixed
+	top: 0
+	width: 70%
+	left: 100%
+	height: 100%
+	background: $darker-blue
+	overflow: hidden
+	@include transition-property(all)
+	@include transition-duration(0.3s)
+	@include transition-timing-function(ease)
+	z-index: 99
+
+	ul
+		position: relative
+		overflow-y: scroll
+		height: 100%
+		li ul li a 
+			padding: 15px
+	a
+		display: block
+		background: $dark-blue
+		border-top: 1px solid #3b3c41
+		border-bottom: 1px solid #22222a
+		color: #cccccc
+		font-size: .9em
+		
+		span.texto
+			display: table-cell
+			vertical-align: middle
+			height: 48px
+			font-weight: bold
+			color: #FFF
+			@include clearfix
+
+		span.icono
+			display: block
+			float: left
+			width: 48px
+			height: 48px
+			margin-right: 10px
+
+			&.periodos
+				background: $periodos
+			&.artes
+				background: $artes
+			&.baul
+				background: $baul
+			&.atlas
+				background: $atlas
+			&.curiosidades
+				background: $curiosidades	
+	
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		height: 100%
+		width: 34px
+		background: linear-gradient(left, rgba(black, 0), rgba(black, 0.4))
+
+.content
+	padding: 100px 20px 20px 20px
+
+.close-menu
+	display: none
+
+#main-nav:target
+	width: 70%
+	left: 30%
+	
+#main-nav:target + .page-wrap
+	left: -70%
+	.main-header
+		left: -70%
+	.open-menu
+		display: none 
+	.close-menu
+		display: block
+
+// submenus
+#sub-periodos, #sub-curiosidades, #sub-artes, #sub-baul, #sub-atlas
+	height: 0px
+	overflow: hidden
+	@include transition-property(all)
+	@include transition-duration(0.5s)
+	@include transition-timing-function(ease)
+	
+#link-sub-periodos.activo + ul
+	height: 484px
+#link-sub-curiosidades.activo + ul
+	height: 176px
+#link-sub-artes.activo + ul
+	height: 264px
+#link-sub-baul.activo + ul
+	height: 264px
+#link-sub-atlas.activo + ul
+	height: 1408px
+	
+
+section
+	background: white
+	box-shadow: $shadow
+	margin: $spacer
+
+#slider
+	display: none
+	position: relative
+	border: solid $spacer/2 #FFF
+	.caption 
+		position: absolute
+		bottom: 0
+		background: rgba(0,0,0,.5)
+		color: #fff
+		width: 100%
+	img
+		width: 100%
+	h2
+		background: none
+		font-size: .9em
+		font-weight: normal
+		text-transform: none
+		padding: 5px 5px 0 5px
+	h3
+		background: none
+		font-size: 1.5em
+		font-weight: normal
+		text-transform: none
+		padding: 5px
+	.slidesjs-navigation 
+		display: none
+
+section
+	h2
+		background: $dark-gray
+		color: white
+		padding: $spacer/2
+		font-weight: bold
+		text-transform: uppercase
+
+	article
+		margin: $spacer/2
+		padding-bottom: $spacer/2
+		border-bottom: 2px solid #ccc
+		&:last-child
+			padding-bottom: none
+			border-bottom: none
+		h3
+			font-weight: bold
+
+#portada
+	a
+		display: block
+		background:  lighten($dark-gray, 70%)
+		padding: $spacer/2
+		color: $dark-gray
+		text-decoration: none
+		position: relative
+
+		&.periodos
+			border-bottom: 3px solid $periodos
+		&.artes
+			border-bottom: 3px solid $artes
+		&.baul
+			border-bottom: 3px solid $baul
+		&.atlas
+			border-bottom: 3px solid $atlas
+		&.curiosidades
+			border-bottom: 3px solid $curiosidades
+	span
+		position: absolute
+		right: 5px
+
+#featured
+	margin-top: 99px
+
+footer
+	background: white url(../img/footer_shadow.png) top center no-repeat
+	text-align: center
+	clear: both
+	p 
+		margin: 0
+		&:last-child
+			padding-bottom: $spacer/2
+		a
+			color: $dark-gray
+			padding: $spacer/2
+			display: inline-block
+			clear: both
+			text-decoration: none
