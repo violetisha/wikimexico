@@ -18,8 +18,37 @@ $(function() {
 
 	//submenu
 	$('#main-nav > ul li a').click(function() {
-		$("#main-nav > ul li a").removeClass("activo");
-		$(this).addClass("activo");
+		
+		if($(this).hasClass('activo')){
+			$(this).removeClass("activo");
+		}
+		else {
+			$(this).addClass("activo");
+		}
+		// fix brinco en menu
+		$("#main-nav").css("position", "absolute")
 	});
 
+	// fix brinco en menu
+	$('.close-menu').click(function() {
+		
+		$("#main-nav").css("position", "fixed")
+	});
+
+	
+
+});
+
+$(window).load(function(){
+	var alto;
+	// alto minimo
+	alto = $(".page-wrap").height()
+	$("#main-nav").css("min-height", alto)
+});
+
+$(window).resize(function() {
+	var alto;
+	// alto minimo
+	alto = $(".page-wrap").height()
+	$("#main-nav").css("min-height", alto)
 });
