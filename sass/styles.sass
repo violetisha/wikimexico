@@ -310,6 +310,9 @@ section
 	img
 		margin: 0 $spacer/2 $spacer
 
+#titulo 
+	border-top: 5px solid #aaa
+
 .lista
 	article
 		@include clearfix
@@ -329,7 +332,37 @@ section
 
 		.texto
 			float: left
+			padding-top: $spacer/2
 
+.cargar a
+	padding: $spacer
+	text-transform: uppercase
+	text-align: center
+	display: block
+	font-weight: bold
+	border-bottom: 5px solid #aaa
+	color: inherit
+	font-size: 1.2em
+
+.colaboradores
+	article
+		@include clearfix
+	img
+		float: left
+		margin: 0 $spacer/2 0 0
+
+	.texto
+		float: left
+		padding-top: $spacer/2
+
+	h2 
+		font-size: 1.3em
+		color: #333
+		font-weight: bold
+	p
+		margin: 0
+		a
+			color: #1591ce
 
 footer
 	background: white url(../img/footer_shadow.png) top center no-repeat
