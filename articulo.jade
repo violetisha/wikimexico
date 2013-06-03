@@ -168,44 +168,48 @@ html
 				.logo
 					img(src='img/logo_wikimexico.png', alt='WikiMéxico')
 			.wrapper
-				section#featured
-					#slider
-						- for (var j = 1; j <= 3; ++j) {
-						div
+				section#articulo
+					article
+						.imagen
 							img(src='http://placehold.it/420x237', alt='WikiMéxico')
-							.caption
-								h2 Primer línea
-								h3 Segunda línea
-						- }
+						h1 Máscara contra cabellera
+						p.meta Por: Claudia Espinoza  /  Fecha: 21/05/2013
+						p Un cuadrilátero, tres cuerdas, un enfrentamiento entre el bien y el mal, los rudos  contra los técnicos, personajes enigmáticos, la patada charra, la tacolpeña, la nórdica, llaves, contra llaves, candados… de pronto un hombre estrellado contra las butacas, se levanta con la cara ensagrentada.
+						p “¡Mátalo! ¡Rómpele su madre!” Grita la multitud, rechiflas. Niños, hombres y mujeres saltan de sus butacas y se consumen la garganta para apoyar a su favorito, que se está jugando lo más preciado: su máscara o su cabellera. 
+						p Es la lucha libre, una mezcla de deporte y secuencias teatrales, una derivación de la lucha grecorromana, cuyos antecedentes en nuestro país datan de 1863, época de la intervención francesa. Uno de los primero luchadores fue Enrique Ugartechea.
+						p Pero, fue hasta 1933 que Salvador Lutheroth, un expagador de las fuerzas obregonistas, decide invertir en un negocio que “dejara utilidades inmediatas y en el que no tuviera que fiar a nadie” y funda la Empresa Mexicana de Lucha Libre.
+						p La máscara es el icono de la lucha libre inspirado en las antiguas máscaras mayas y toltecas. El primer gladiador que la usó, fue el Ciclón McKey, conocido como la maravilla enmascarada, cuya máscara fue realizada en piel de cerdo por don Antonio Martínez, quien se dedicaba a la confección de calzado para boxeadores.
+						iframe(width='100%', height='200', src='http://www.youtube.com/embed/YY8d1TEZeqI', frameborder='0', allowfullscreen='allowfullscreen')
 
-				section#portada
-					h2 En Portada
-					nav
-						ul
-							li
-								a.periodos(href="#") Lollipop marzipan
-									span.icon-angle-right
-							li
-								a.curiosidades(href="#") Gummies jelly beans
-									span.icon-angle-right
-							li
-								a.artes(href="#") Dessert tiramisu I love
-									span.icon-angle-right
-							li
-								a.baul(href="#") Candy dessert gingerbread
-									span.icon-angle-right
-							li
-								a.atlas(href="#") Chocolate apple pie lemon drops
-									span.icon-angle-right
+				section#comenta
+					article
+						h1 Comparte y Comenta
+						p Aquí deben ir los comentarios de FB
 
-				section#enterate
-					h2 Entérate con WikiMéxico 
+				section#relacionados
 					article
-						h3 Un día como hoy, 15 de mayo de 1867:
-						p Tropas republicanas vencen al emperador Maximiliano en Querétaro
-					article
-						h3 Sabías que...
-						p Como la mujer del general Tomás Mejía no tenía dinero para enterrar a su marido, mantuvo su cuerpo embalsamado en la sala de su casa durante 6 meses en 1867.
+						h1 Te puede interesar
+						nav
+							ul
+								li
+									a(href="#") Joaquín Pardavé: "Varita bonita, cortada al amanecer"
+										span.icon-angle-right
+								li
+									a(href="#") Máscara contra cabellera
+										span.icon-angle-right
+								li
+									a(href="#") ¡Ahí madre!
+										span.icon-angle-right
+								li
+									a(href="#") "Toma estos centavos y que dios te cuide": Francisco Cabañas
+										span.icon-angle-right
+								li
+									a(href="#")	"Tendrá su casa, mi jefecita": El "ratón" Macías
+										span.icon-angle-right
+
+				#download
+					img(src="img/btn_appstore.png")
+					img(src="img/btn_googleplay.png")
 
 			include includes/footer
 		include includes/scripts

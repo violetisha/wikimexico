@@ -41,7 +41,11 @@ p
 	font-family: Georgia, Times New Roman, sans serif
 	font-size: .9em
 	margin: $spacer/2 0
-	line-height: 1.3em
+	line-height: 1.8em
+h1
+	font-size: 1.5em
+	color: #333
+	font-weight: bold
 
 .main-header
 	background: white
@@ -69,6 +73,9 @@ p
 	.logo
 		margin-left: 6px
 		padding: $spacer/2
+
+.wrapper 
+	margin-top: 99px
 
 .page-wrap
 	width: 100%
@@ -196,12 +203,6 @@ p
 #link-sub-atlas.activo + ul
 	height: 1408px
 	
-
-section
-	background: white
-	box-shadow: $shadow
-	margin: $spacer
-
 #slider
 	display: none
 	position: relative
@@ -230,16 +231,21 @@ section
 		display: none
 
 section
-	h2
-		background: $dark-gray
-		color: white
-		padding: $spacer/2
-		font-weight: bold
-		text-transform: uppercase
+	background: white
+	box-shadow: $shadow
+	margin: $spacer
+	@include clearfix
+
+	&#portada, &#enterate
+		h2
+			background: $dark-gray
+			color: white
+			padding: $spacer/2
+			font-weight: bold
+			text-transform: uppercase
 
 	article
 		margin: $spacer/2
-		padding-bottom: $spacer/2
 		border-bottom: 2px solid #ccc
 		&:last-child
 			padding-bottom: none
@@ -270,8 +276,60 @@ section
 		position: absolute
 		right: 5px
 
-#featured
-	margin-top: 99px
+#articulo 
+	.imagen
+		max-height: 300px
+		overflow: hidden
+		margin-bottom: $spacer/2
+		img
+			width: 100%
+			height: auto
+
+	.meta
+		color: #666
+		font-style: italic
+
+#relacionados
+	nav
+		padding-top: $spacer/2 
+	a
+		display: block
+		border-top: 2px solid #CCC
+		padding: $spacer/2 25px $spacer/2 0
+		color: $dark-gray
+		text-decoration: none
+		position: relative
+
+	span
+		position: absolute
+		right: 5px
+
+#download
+	text-align: center
+
+	img
+		margin: 0 $spacer/2 $spacer
+
+.lista
+	article
+		@include clearfix
+	a
+		color: inherit
+		display: block
+		@include clearfix
+		img
+			width: 100px
+			float: left
+			margin: 0 $spacer 0 0
+
+		h2 
+			font-size: 1.3em
+			color: #333
+			font-weight: bold
+
+		.texto
+			float: left
+
 
 footer
 	background: white url(../img/footer_shadow.png) top center no-repeat
@@ -279,6 +337,7 @@ footer
 	clear: both
 	p 
 		margin: 0
+		font-size: .8em
 		&:last-child
 			padding-bottom: $spacer/2
 		a
