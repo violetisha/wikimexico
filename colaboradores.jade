@@ -1,0 +1,194 @@
+!!! 5
+html
+	include includes/head
+	body
+		nav#main-nav.main-nav
+			ul
+				li
+					
+					a#link-sub-periodos(href='#main-nav')
+						span.icono.periodos
+						span.texto Periodos de la Historia
+						
+					ul#sub-periodos
+						li
+							a(href='#') El siglo de la conquista
+						li
+							a(href='#') La Nueva España
+						li
+							a(href='#') Aires libertarios
+						li
+							a(href='#') La época de la anarquía
+						li
+							a(href='#') La era liberal
+						li
+							a(href='#') El Porfiriato
+						li
+							a(href='#') La Revolución
+						li
+							a(href='#') La reconstrucción
+						li
+							a(href='#') La estabilidad
+						li
+							a(href='#') La época de las crisis
+						li
+							a(href='#') La transición democrática
+
+				li
+					
+					a#link-sub-curiosidades(href='#main-nav') 
+						span.icono.curiosidades
+						span.texto Curiosidades del Pasado
+						
+					ul#sub-curiosidades
+						li
+							a(href='#') Datos Curiosos
+						li
+							a(href='#') Infografías
+						li
+							a(href='#') Nuestra Galería
+						li
+							a(href='#') Bully Magnets
+						
+				li
+					
+					a#link-sub-artes(href='#main-nav') 
+						span.icono.artes
+						span.texto Artes
+						
+					ul#sub-artes
+						li
+							a(href='#') Literatura
+						li
+							a(href='#') Música
+						li
+							a(href='#') Cine
+						li
+							a(href='#') Artes Escénicas
+						li
+							a(href='#') Artes Visuales
+						li
+							a(href='#') Arquitectura
+
+				li
+					
+					a#link-sub-baul(href='#main-nav')
+						span.icono.baul
+						span.texto Baúl de Wiki
+						
+					ul#sub-baul
+						li
+							a(href='#') Nota Curiosa
+						li
+							a(href='#') Recetario
+						li
+							a(href='#') Entretenimiento
+						li
+							a(href='#') Ciencia y Tecnología
+						li
+							a(href='#') Planeta Verde
+						li
+							a(href='#') Cancionero
+				li
+					a#link-sub-atlas(href='#main-nav')
+						span.icono.atlas
+						span.texto Atlas
+						
+					ul#sub-atlas
+						li
+							a(href='#') Aguascalientes
+						li
+							a(href='#') Baja California
+						li
+							a(href='#') Baja California Sur
+						li
+							a(href='#') Campeche
+						li
+							a(href='#') Coahuila
+						li
+							a(href='#') Colima
+						li
+							a(href='#') Chiapas
+						li
+							a(href='#') Chihuahua
+						li
+							a(href='#') Distrito Federal
+						li
+							a(href='#') Durango
+						li
+							a(href='#') Guanajuato
+						li
+							a(href='#') Guerrero
+						li
+							a(href='#') Hidalgo
+						li
+							a(href='#') Jalisco
+						li
+							a(href='#') Estado de México
+						li
+							a(href='#') Michoacán
+						li
+							a(href='#') Morelos
+						li
+							a(href='#') Nayarit
+						li
+							a(href='#') Nuevo León
+						li
+							a(href='#') Oaxaca
+						li
+							a(href='#') Puebla
+						li
+							a(href='#') Querétaro
+						li
+							a(href='#') Quintana Roo
+						li
+							a(href='#') San Luis Potosí
+						li
+							a(href='#') Sinaloa
+						li
+							a(href='#') Sonora
+						li
+							a(href='#') Tabasco
+						li
+							a(href='#') Tamaulipas
+						li
+							a(href='#') Tlaxcala
+						li
+							a(href='#') Veracruz
+						li
+							a(href='#') Yucatán
+						li
+							a(href='#') Zacatecas
+		.page-wrap
+			header.main-header
+				a.open-menu(href='#main-nav')
+					span.icon-reorder
+				a.close-menu(href='#')
+					span.icon-reorder
+				.logo
+					img(src='img/logo_wikimexico.png', alt='WikiMéxico')
+			.wrapper
+
+				section#titulo
+					article
+						h1 El siglo de la Conquista
+
+				- for (var j = 1; j <= 3; ++j) {
+				section.colaboradores
+					article
+						img(src='http://placehold.it/80x80', alt='WikiMéxico')
+						.texto
+							h2 Paulina Álvarez Salgado
+							p.meta Twitter: 
+								a(href="#") @pau_stokely
+							p.meta Email: 
+								a(href="#") stokely1220@yahoo.com.mx
+				- }
+
+				section.cargar
+					a(href="#") Cargar más
+
+									
+			include includes/footer
+		include includes/scripts
+		
