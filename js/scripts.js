@@ -23,6 +23,7 @@ $(function() {
 			$(this).removeClass("activo");
 		}
 		else {
+			$("#main-nav > ul > li > a").removeClass("activo");
 			$(this).addClass("activo");
 		}
 		// fix brinco en menu
